@@ -434,7 +434,7 @@ class DocCheckAuthenticationService extends \TYPO3\CMS\Sv\AbstractAuthentication
 			return false;
 		}
 
-		return ( $user['pid'] === $this->extConf['dummyUserPid']
+		return ( $user['pid'] === (int)$this->extConf['dummyUserPid']
 			&& $user['username'] === $this->extConf['dummyUser']);
 	}
 
